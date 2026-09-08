@@ -3,79 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rizen - Contabilidad y Asesoria para Empresas en Chile</title>
-  <meta name="description" content="Contabilidad, impuestos y remuneraciones gestionados por profesionales para que puedas enfocarte en hacer crecer tu negocio.">
+  <title>Rizen - Contabilidad y Asesoría para Empresas en Chile</title>
+  <meta name="description" content="Contabilidad, impuestos y remuneraciones al día, gestionados por profesionales con +10 años de experiencia. Primera asesoría sin costo. Atención en todo Chile.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
+  <div class="progress-bar"></div>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container">
-      <a href="#" class="header__logo">
-        <img src="img/logo.png" alt="Rizen">
+      <a href="#" class="header__logo" aria-label="Rizen - Inicio">
+        <img src="img/logo.png" alt="Rizen - Contabilidad e Impuestos">
       </a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
         <a href="#emprendedores">Emprendedores</a>
         <a href="#empresas">Empresas</a>
         <a href="#nosotros">Nosotros</a>
       </nav>
-      <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20informacion%20sobre%20sus%20servicios" class="header__cta">
+      <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20una%20asesor%C3%ADa%20sin%20costo" class="header__cta" target="_blank" rel="noopener">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Hablar por WhatsApp</span>
       </a>
+      <button class="header__hamburger" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </header>
 
+  <!-- MOBILE DRAWER -->
+  <div class="drawer__overlay"></div>
+  <aside class="drawer" aria-label="Menú móvil">
+    <div class="drawer__header">
+      <img src="img/logo.png" alt="Rizen">
+      <button class="drawer__close" aria-label="Cerrar menú">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#emprendedores">Emprendedores</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#precios">Precios</a>
+      <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20una%20asesor%C3%ADa%20sin%20costo" class="btn btn--whatsapp" target="_blank" rel="noopener">Quiero mi asesoría gratis</a>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
   <section class="hero">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
     <div class="container">
       <div class="hero__content">
-        <span class="hero__badge">CONTABILIDAD Y ASESORIA PARA EMPRESAS EN CHILE</span>
-        <h1 class="hero__title">Tu empresa crece.<br>Nosotros nos encargamos de que este en orden.</h1>
-        <p class="hero__subtitle">Contabilidad, impuestos y remuneraciones gestionados por profesionales para que puedas enfocarte en hacer crecer tu negocio.</p>
-        <div class="hero__actions">
-          <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20una%20asesoria" class="btn btn--whatsapp btn--lg">
+        <span class="hero__badge hero-anim" style="--d: 0ms">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Contabilidad y asesoría para empresas en Chile
+        </span>
+        <h1 class="hero__title hero-anim" style="--d: 100ms">Tu empresa crece. Nosotros la mantenemos <em>al día con el SII</em>.</h1>
+        <p class="hero__subtitle hero-anim" style="--d: 200ms">¿Declaraciones atrasadas? ¿Multas evitables? ¿Contabilidad desordenada? Nos encargamos de tus impuestos, remuneraciones y contabilidad para que tú solo te dediques a hacer crecer tu negocio.</p>
+        <div class="hero__actions hero-anim" style="--d: 300ms">
+          <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20mi%20asesor%C3%ADa%20sin%20costo" class="btn btn--whatsapp btn--lg btn--pulse" target="_blank" rel="noopener">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Hablar con un asesor
+            Quiero mi asesoría gratis
           </a>
           <a href="#servicios" class="btn btn--outline btn--lg">Ver servicios</a>
         </div>
-        <div class="hero__micro">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Atencion en todo Chile
+        <div class="hero__micro hero-anim" style="--d: 400ms">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Primera asesoría sin costo · Respuesta en menos de 1 hora hábil
         </div>
       </div>
 
-      <div class="card-estado">
-        <h3 class="card-estado__title">ESTADO DE TU EMPRESA</h3>
+      <div class="card-estado hero-anim" style="--d: 500ms">
+        <h3 class="card-estado__title">Estado de tu empresa</h3>
         <div class="card-estado__item">
           <span class="card-estado__label">Contabilidad</span>
           <span class="card-estado__status">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Al dia
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Al día
           </span>
         </div>
         <div class="card-estado__item">
-          <span class="card-estado__label">Declaracion F29</span>
+          <span class="card-estado__label">Declaración F29</span>
           <span class="card-estado__status">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Presentada
           </span>
         </div>
         <div class="card-estado__item">
           <span class="card-estado__label">Remuneraciones</span>
           <span class="card-estado__status">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Procesadas
           </span>
         </div>
         <div class="card-estado__item">
           <span class="card-estado__label">Inicio de actividades</span>
           <span class="card-estado__status">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Vigente
           </span>
         </div>
@@ -87,499 +119,592 @@
     </div>
   </section>
 
+  <!-- TRUST BAR -->
   <section class="trust">
     <div class="container">
-      <div class="trust__item">
-        <span class="trust__number">+10 anios</span>
-        <span class="trust__text">de experiencia profesional</span>
+      <div class="trust__item" data-reveal>
+        <span class="trust__number" data-count="10" data-prefix="+">+10</span>
+        <span class="trust__text">años de experiencia profesional</span>
       </div>
-      <div class="trust__item">
-        <span class="trust__number">Especializacion</span>
-        <span class="trust__text">Tributaria Universidad de Chile</span>
+      <div class="trust__item" data-reveal data-reveal-delay="100">
+        <span class="trust__number" data-count="200" data-prefix="+">+200</span>
+        <span class="trust__text">empresas asesoradas en Chile</span>
       </div>
-      <div class="trust__item">
-        <span class="trust__number">Todo Chile</span>
-        <span class="trust__text">Atencion a nivel nacional</span>
+      <div class="trust__item" data-reveal data-reveal-delay="200">
+        <span class="trust__number" data-count="98" data-suffix="%">98%</span>
+        <span class="trust__text">de clientes satisfechos</span>
       </div>
     </div>
   </section>
 
+  <!-- SEGMENTACION -->
   <section class="segmentacion" id="etapa">
     <div class="container">
-      <h2 class="segmentacion__title">En que etapa esta tu empresa?</h2>
-      <p class="segmentacion__subtitle">Cuentanos donde estas y te ayudamos a dar el siguiente paso.</p>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">El siguiente paso</span>
+        <h2>¿En qué etapa está tu empresa?</h2>
+        <p>Cuéntanos dónde estás y te ayudamos a dar el siguiente paso, sin trámites eternos ni sorpresas.</p>
+      </div>
       <div class="segmentacion__grid">
-        <div class="seg-card">
+        <div class="seg-card" data-reveal>
           <div class="seg-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
           <h3 class="seg-card__title">Estoy comenzando</h3>
-          <p class="seg-card__text">Empieza tu empresa correctamente desde el primer dia. Nos encargamos de todo el proceso de constitucion y formalizacion.</p>
+          <p class="seg-card__text">Empieza tu empresa correctamente desde el primer día. Constitución, formalización y todo listo para facturar sin sustos con el SII.</p>
           <ul class="seg-card__list">
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Constitucion de empresa</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Formalizacion ante SII</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Configuracion tributaria</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Implementacion contable</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Constitución de empresa</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Formalización ante el SII</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Configuración tributaria</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Implementación contable</li>
           </ul>
-          <a href="https://wa.me/56900000000?text=Hola%2C%20estoy%20comenzando%20mi%20empresa%20y%20necesito%20ayuda" class="btn btn--whatsapp">Quiero comenzar</a>
+          <a href="https://wa.me/56900000000?text=Hola%2C%20estoy%20comenzando%20mi%20empresa%20y%20necesito%20ayuda" class="btn btn--whatsapp" target="_blank" rel="noopener">Quiero comenzar bien</a>
         </div>
-        <div class="seg-card">
+        <div class="seg-card" data-reveal data-reveal-delay="150">
           <div class="seg-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="seg-card__title">Mi empresa ya esta funcionando</h3>
-          <p class="seg-card__text">Nos encargamos de tu contabilidad para que tu puedas encargarte de tu negocio. Organizamos todo para que crezcas con tranquilidad.</p>
+          <h3 class="seg-card__title">Mi empresa ya está funcionando</h3>
+          <p class="seg-card__text">¿Contabilidad atrasada o miedo a una fiscalización? Regularizamos tu situación y la mantenemos al día, mes a mes, sin excepciones.</p>
           <ul class="seg-card__list">
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Contabilidad mensual</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Gestion de impuestos</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Remuneraciones</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Apoyo legal</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Contabilidad mensual al día</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Gestión de impuestos y F29</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Remuneraciones y liquidaciones</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Apoyo legal para tu negocio</li>
           </ul>
-          <a href="https://wa.me/56900000000?text=Hola%2C%20tengo%20una%20empresa%20y%20necesito%20ordenar%20mi%20contabilidad" class="btn btn--whatsapp">Quiero ordenar mi empresa</a>
+          <a href="https://wa.me/56900000000?text=Hola%2C%20tengo%20una%20empresa%20y%20necesito%20ordenar%20mi%20contabilidad" class="btn btn--whatsapp" target="_blank" rel="noopener">Quiero ordenar mi empresa</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SERVICIOS -->
   <section class="servicios" id="servicios">
     <div class="container">
-      <div class="servicios__header">
-        <h2 class="servicios__title">Nuestros servicios</h2>
-        <p class="servicios__subtitle">Todo lo que tu empresa necesita para estar en regla y crecer</p>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Servicios</span>
+        <h2>Todo lo que tu empresa necesita</h2>
+        <p>Un solo equipo para contabilidad, impuestos, remuneraciones y legal. Sin intermediarios ni letra chica.</p>
       </div>
       <div class="servicios__grid">
-        <div class="serv-card">
+        <div class="serv-card" data-reveal>
           <div class="serv-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <h3 class="serv-card__title">Constitucion de empresas</h3>
-          <p class="serv-card__text">Creamos tu empresa de forma rapida y correcta. Nos encargamos de toda la documentacion y tramites ante el SII.</p>
+          <h3 class="serv-card__title">Constitución de empresas</h3>
+          <p class="serv-card__text">Tu empresa constituida y facturando en días, no meses. Escritura, RUT, patente y todo el papeleo resuelto por nosotros.</p>
         </div>
-        <div class="serv-card">
+        <div class="serv-card" data-reveal data-reveal-delay="100">
           <div class="serv-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="10" y1="3" x2="10" y2="9"/></svg>
           </div>
           <h3 class="serv-card__title">Contabilidad mensual</h3>
-          <p class="serv-card__text">Llevamos tu contabilidad al dia con reportes claros y actualizados. Sabes siempre donde esta tu negocio.</p>
+          <p class="serv-card__text">Reportes claros cada mes: sabrás exactamente cuánto ganas, cuánto debes y cómo está tu negocio. Sin Excel improvisados.</p>
         </div>
-        <div class="serv-card">
+        <div class="serv-card" data-reveal data-reveal-delay="200">
           <div class="serv-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h3 class="serv-card__title">Gestion de impuestos</h3>
-          <p class="serv-card__text">Declaramos y gestionamos tus impuestos para que nunca tengas problemas con el SII. Optimizamos tu carga tributaria.</p>
+          <h3 class="serv-card__title">Impuestos y F29</h3>
+          <p class="serv-card__text">Declaraciones siempre a plazo y optimizamos tu carga tributaria de forma legal. Nunca más una multa por un olvido.</p>
         </div>
-        <div class="serv-card">
+        <div class="serv-card" data-reveal data-reveal-delay="100">
           <div class="serv-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3 class="serv-card__title">Remuneraciones</h3>
-          <p class="serv-card__text">Calculamos y emitimos las remuneraciones de tus colaboradores. Liquidaciones, AFP, FONASA y todo en regla.</p>
+          <p class="serv-card__text">Liquidaciones, AFP, salud e imposiciones de tus trabajadores calculadas y pagadas a tiempo, todos los meses.</p>
         </div>
-        <div class="serv-card">
+        <div class="serv-card" data-reveal data-reveal-delay="200">
           <div class="serv-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <h3 class="serv-card__title">Apoyo legal</h3>
-          <p class="serv-card__text">Te asesoramos en temas legales de tu empresa. Contratos, laboral y todo lo que necesitas para operar tranquilo.</p>
+          <p class="serv-card__text">Contratos, temas laborales y consultas legales del día a día de tu empresa. Tu abogado de cabecera, incluido en el servicio.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- EMPRENDEDORES -->
   <section class="proceso" id="emprendedores">
     <div class="container">
-      <div class="proceso__content">
-        <span class="proceso__badge">PARA EMPRENDEDORES</span>
-        <h2 class="proceso__title">Empieza tu empresa correctamente desde el primer dia</h2>
-        <p class="proceso__text">Te acompanamos en cada paso del proceso de constitucion para que no tengas que preocuparte por los tramites ni la documentacion.</p>
+      <div data-reveal>
+        <span class="eyebrow">Para emprendedores</span>
+        <h2 class="proceso__title">Empieza tu empresa correctamente desde el primer día</h2>
+        <p class="proceso__text">El 90% de los problemas tributarios nacen de una mala constitución. Te acompañamos en cada paso para que partas bien y nunca tengas que arreglar nada después.</p>
         <div class="proceso__steps">
-          <div class="step">
+          <div class="step" data-reveal>
             <div class="step__num">01</div>
             <div class="step__content">
-              <h4 class="step__title">Constitucion</h4>
-              <p class="step__text">Creacion de la empresa, estatutos e inscripcion en el Registro de Comercio.</p>
+              <h4 class="step__title">Constitución</h4>
+              <p class="step__text">Creamos tu empresa con el tipo societario correcto para tu giro y tus planes de crecimiento.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step" data-reveal data-reveal-delay="100">
             <div class="step__num">02</div>
             <div class="step__content">
-              <h4 class="step__title">Formalizacion</h4>
-              <p class="step__text">Obtencion de numero de RUT, apertura de cuenta bancaria y permisos municipales.</p>
+              <h4 class="step__title">Formalización</h4>
+              <p class="step__text">RUT empresa, cuenta bancaria corporativa y patente municipal lista para facturar.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step" data-reveal data-reveal-delay="200">
             <div class="step__num">03</div>
             <div class="step__content">
-              <h4 class="step__title">Configuracion tributaria</h4>
-              <p class="step__text">Seleccion del regimen tributario, F29, libros contables y todo lo necesario para operar.</p>
+              <h4 class="step__title">Configuración tributaria</h4>
+              <p class="step__text">Elegimos contigo el régimen tributario que menos impuestos te hará pagar legalmente.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step" data-reveal data-reveal-delay="300">
             <div class="step__num">04</div>
             <div class="step__content">
-              <h4 class="step__title">Implementacion contable</h4>
-              <p class="step__text">Configuracion del sistema contable, plan de cuentas y procesos mensuales.</p>
+              <h4 class="step__title">Implementación contable</h4>
+              <p class="step__text">Tu sistema contable listo desde la primera venta. Todo ordenado desde el día uno.</p>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="card-estado">
-          <h3 class="card-estado__title">LO QUE INCLUYE</h3>
-          <div class="card-estado__item">
-            <span class="card-estado__label">Constitucion completa</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Incluido
-            </span>
-          </div>
-          <div class="card-estado__item">
-            <span class="card-estado__label">RUT y apertura bancaria</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Incluido
-            </span>
-          </div>
-          <div class="card-estado__item">
-            <span class="card-estado__label">Configuracion tributaria</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Incluido
-            </span>
-          </div>
-          <div class="card-estado__item">
-            <span class="card-estado__label">Soporte continuo</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Incluido
-            </span>
-          </div>
+      <div class="card-estado" data-reveal data-reveal-delay="200">
+        <h3 class="card-estado__title">Lo que incluye</h3>
+        <div class="card-estado__item">
+          <span class="card-estado__label">Constitución completa</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Incluido
+          </span>
+        </div>
+        <div class="card-estado__item">
+          <span class="card-estado__label">RUT y apertura bancaria</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Incluido
+          </span>
+        </div>
+        <div class="card-estado__item">
+          <span class="card-estado__label">Configuración tributaria</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Incluido
+          </span>
+        </div>
+        <div class="card-estado__item">
+          <span class="card-estado__label">Soporte continuo</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Incluido
+          </span>
+        </div>
+        <div class="card-estado__updated">
+          <span class="card-estado__dot"></span>
+          Desde 2 UF · Plan Emprende
         </div>
       </div>
     </div>
   </section>
 
+  <!-- EMPRESAS -->
   <section class="proceso proceso--alt" id="empresas">
     <div class="container">
-      <div class="proceso__content">
-        <span class="proceso__badge">PARA EMPRESAS</span>
-        <h2 class="proceso__title">Nos encargamos de tu contabilidad para que tu puedas encargarte de tu negocio</h2>
-        <p class="proceso__text">Un servicio integral de contabilidad y gestion que te permite enfocarte en hacer crecer tu empresa mientras nosotros nos ocupamos del orden.</p>
+      <div data-reveal>
+        <span class="eyebrow">Para empresas</span>
+        <h2 class="proceso__title">Nos encargamos de tu contabilidad para que tú te encargues de tu negocio</h2>
+        <p class="proceso__text">Trabajamos en silencio de fondo: declaraciones a plazo, remuneraciones a tiempo y reportes que sí entiendes. Tu única tarea es leerlos.</p>
         <div class="proceso__steps">
-          <div class="step">
+          <div class="step" data-reveal>
             <div class="step__num">01</div>
             <div class="step__content">
-              <h4 class="step__title">Diagnostico</h4>
-              <p class="step__text">Analizamos tu situacion actual y detectamos oportunidades de mejora.</p>
+              <h4 class="step__title">Diagnóstico gratuito</h4>
+              <p class="step__text">Revisamos tu situación actual y te mostramos exactamente qué hay que arreglar y cuánto cuesta.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step" data-reveal data-reveal-delay="100">
             <div class="step__num">02</div>
             <div class="step__content">
-              <h4 class="step__title">Implementacion</h4>
-              <p class="step__text">Configuramos los procesos contables y tributarios de tu empresa.</p>
+              <h4 class="step__title">Regularización</h4>
+              <p class="step__text">Ponemos al día declaraciones atrasadas y resolvemos multas pendientes, si las hay.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step" data-reveal data-reveal-delay="200">
             <div class="step__num">03</div>
             <div class="step__content">
-              <h4 class="step__title">Gestion mensual</h4>
-              <p class="step__text">Llevamos tu contabilidad, impuestos y remuneraciones al dia.</p>
+              <h4 class="step__title">Gestión mensual</h4>
+              <p class="step__text">Contabilidad, F29 y remuneraciones cada mes, sin que tengas que pedirlo ni recordarlo.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step" data-reveal data-reveal-delay="300">
             <div class="step__num">04</div>
             <div class="step__content">
-              <h4 class="step__title">Reportes y seguimiento</h4>
-              <p class="step__text">Te mantenemos informado con reportes claros y reuniones periodicas.</p>
+              <h4 class="step__title">Reportes y asesoría</h4>
+              <p class="step__text">Informe mensual claro y asesor directo por WhatsApp para cualquier duda del negocio.</p>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="card-estado">
-          <h3 class="card-estado__title">BENEFICIOS</h3>
-          <div class="card-estado__item">
-            <span class="card-estado__label">Contabilidad al dia</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Siempre
-            </span>
-          </div>
-          <div class="card-estado__item">
-            <span class="card-estado__label">Impuestos en regla</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Siempre
-            </span>
-          </div>
-          <div class="card-estado__item">
-            <span class="card-estado__label">Remuneraciones procesadas</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Siempre
-            </span>
-          </div>
-          <div class="card-estado__item">
-            <span class="card-estado__label">Asesoria personalizada</span>
-            <span class="card-estado__status">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Siempre
-            </span>
-          </div>
+      <div class="card-estado" data-reveal data-reveal-delay="200">
+        <h3 class="card-estado__title">Beneficios</h3>
+        <div class="card-estado__item">
+          <span class="card-estado__label">Cero multas del SII</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Garantizado
+          </span>
+        </div>
+        <div class="card-estado__item">
+          <span class="card-estado__label">Declaraciones a plazo</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Siempre
+          </span>
+        </div>
+        <div class="card-estado__item">
+          <span class="card-estado__label">Asesor dedicado</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Por WhatsApp
+          </span>
+        </div>
+        <div class="card-estado__item">
+          <span class="card-estado__label">Reportes que entiendes</span>
+          <span class="card-estado__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Mensuales
+          </span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- POR QUE RIZEN -->
   <section class="porque" id="nosotros">
     <div class="container">
-      <div class="porque__header">
-        <h2 class="porque__title">Por que RIZEN?</h2>
-        <p class="porque__subtitle">Somos tu socio estrategico en contabilidad y crecimiento empresarial</p>
+      <div class="section-head" data-reveal>
+        <h2>¿Por qué RIZEN?</h2>
+        <p>No somos otro estudio contable. Somos el equipo que hace que nunca más te preocupe el SII.</p>
       </div>
       <div class="porque__grid">
-        <div class="pq-card">
+        <div class="pq-card" data-reveal>
           <div class="pq-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
-          <h3 class="pq-card__title">+10 anios de experiencia</h3>
-          <p class="pq-card__text">Mas de una decada asesorando a empresas chilenas en contabilidad, impuestos y crecimiento.</p>
+          <h3 class="pq-card__title">+10 años de experiencia</h3>
+          <p class="pq-card__text">Una década resolviendo problemas reales de empresas chilenas. Hemos visto (y resuelto) tu problema antes.</p>
         </div>
-        <div class="pq-card">
+        <div class="pq-card" data-reveal data-reveal-delay="100">
           <div class="pq-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 12 0v-5"/></svg>
           </div>
-          <h3 class="pq-card__title">Especializacion tributaria</h3>
-          <p class="pq-card__text">Equipo con formacion en la Universidad de Chile, especializados en temas tributarios complejos.</p>
+          <h3 class="pq-card__title">Especialización tributaria U. de Chile</h3>
+          <p class="pq-card__text">Formación de la mejor casa de estudios del país. Optimizamos tus impuestos de forma 100% legal.</p>
         </div>
-        <div class="pq-card">
+        <div class="pq-card" data-reveal data-reveal-delay="200">
           <div class="pq-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <h3 class="pq-card__title">Cobertura nacional</h3>
-          <p class="pq-card__text">Atendemos empresas en todo Chile. No importa donde estes, podemos trabajar contigo.</p>
+          <h3 class="pq-card__title">Atención en todo Chile</h3>
+          <p class="pq-card__text">De Arica a Punta Arenas, 100% remoto y a un mensaje de distancia. Tu ubicación ya no importa.</p>
         </div>
-        <div class="pq-card">
+        <div class="pq-card" data-reveal data-reveal-delay="100">
           <div class="pq-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <h3 class="pq-card__title">Confianza y transparencia</h3>
-          <p class="pq-card__text">Reportes claros, comunicacion constante y precios justos. Sin sorpresas ni letra chica.</p>
+          <h3 class="pq-card__title">Precios claros y fijos</h3>
+          <p class="pq-card__text">Sabes exactamente cuánto pagas cada mes. Sin cobros sorpresa, sin horas facturadas de más.</p>
         </div>
-        <div class="pq-card">
+        <div class="pq-card" data-reveal data-reveal-delay="200">
           <div class="pq-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <h3 class="pq-card__title">Enfoque en resultados</h3>
-          <p class="pq-card__text">No solo llevamos tu contabilidad, te ayudamos a tomar mejores decisiones para tu negocio.</p>
+          <h3 class="pq-card__title">Respuesta en horas, no días</h3>
+          <p class="pq-card__text">Tu asesor responde por WhatsApp en menos de 1 hora hábil. Porque tu negocio no puede esperar.</p>
         </div>
-        <div class="pq-card">
+        <div class="pq-card" data-reveal data-reveal-delay="300">
           <div class="pq-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="pq-card__title">Atencion personalizada</h3>
-          <p class="pq-card__text">Cada cliente tiene un asesor dedicado. No eres un numero, eres una empresa que importa.</p>
+          <h3 class="pq-card__title">Asesor dedicado</h3>
+          <p class="pq-card__text">Una persona que conoce tu empresa por su nombre. No un call center ni tickets sin respuesta.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="precios">
+  <!-- TESTIMONIOS -->
+  <section class="testimonios" id="testimonios">
     <div class="container">
-      <div class="precios__header">
-        <h2 class="precios__title">Nuestros planes</h2>
-        <p class="precios__subtitle">Elige el plan que mejor se adapte a tu empresa</p>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Testimonios</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>Emprendedores y empresas que ya duermen tranquilos con su contabilidad al día.</p>
+      </div>
+      <div class="testimonios__grid">
+        <div class="testi-card" data-reveal>
+          <span class="testi-card__quote">"</span>
+          <div class="testi-card__stars" aria-label="5 estrellas">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testi-card__text">"Llevaba dos años con la contabilidad atrasada y un miedo constante a una fiscalización. RIZEN regularizó todo en dos meses y hoy ni me acuerdo de que existe el SII."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">MG</div>
+            <div>
+              <div class="testi-card__name">María González</div>
+              <div class="testi-card__role">Dueña de Cafetería · Providencia</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card" data-reveal data-reveal-delay="150">
+          <span class="testi-card__quote">"</span>
+          <div class="testi-card__stars" aria-label="5 estrellas">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testi-card__text">"Cambiar de contador siempre me dio pereza. Fue la mejor decisión del año: cero multas, F29 siempre a plazo y un asesor que responde al tiro por WhatsApp."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">CR</div>
+            <div>
+              <div class="testi-card__name">Carlos Riquelme</div>
+              <div class="testi-card__role">Gerente General · Constructora SpA</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card" data-reveal data-reveal-delay="300">
+          <span class="testi-card__quote">"</span>
+          <div class="testi-card__stars" aria-label="5 estrellas">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testi-card__text">"Constituyeron mi empresa de cero en una semana. Yo puse la idea, ellos pusieron todo el papeleo. Partí facturando con la tranquilidad de estar 100% en regla."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">AT</div>
+            <div>
+              <div class="testi-card__name">Ana Torres</div>
+              <div class="testi-card__role">Fundadora · E-commerce</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="precios" id="precios">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Planes</span>
+        <h2>Precios claros, sin letra chica</h2>
+        <p>Elige el plan que mejor se adapte a tu empresa. Sin contratos eternos ni cobros sorpresa.</p>
       </div>
       <div class="precios__grid">
-        <div class="price-card">
+        <div class="price-card" data-reveal>
           <h3 class="price-card__name">Emprende</h3>
           <div class="price-card__price">desde 2 UF</div>
-          <p class="price-card__note">Para nuevos emprendedores</p>
+          <p class="price-card__note">mensual · para nuevos emprendedores</p>
           <ul class="price-card__features">
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Constitucion de empresa</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Configuracion tributaria</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Contabilidad mensual</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Soporte via WhatsApp</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Constitución de empresa</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Configuración tributaria</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Contabilidad mensual</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Soporte por WhatsApp</li>
           </ul>
-          <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Emprende" class="btn btn--outline" style="width:100%">Consultar</a>
+          <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20plan%20Emprende" class="btn btn--outline" target="_blank" rel="noopener">Consultar plan</a>
         </div>
-        <div class="price-card price-card--featured">
+        <div class="price-card price-card--featured" data-reveal data-reveal-delay="150">
           <h3 class="price-card__name">Pyme</h3>
-          <div class="price-card__price">Consultar</div>
-          <p class="price-card__note">Para empresas en crecimiento</p>
+          <div class="price-card__price">a cotizar</div>
+          <p class="price-card__note">mensual · para empresas en crecimiento</p>
           <ul class="price-card__features">
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Todo lo del plan Emprende</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Gestion de impuestos</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Remuneraciones</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Reportes mensuales</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Todo lo del plan Emprende</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Gestión completa de impuestos</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Remuneraciones y liquidaciones</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Reporte mensual de resultados</li>
           </ul>
-          <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Pyme" class="btn btn--whatsapp" style="width:100%">Consultar</a>
+          <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20plan%20Pyme" class="btn btn--whatsapp" target="_blank" rel="noopener">Quiero una cotización</a>
         </div>
-        <div class="price-card">
+        <div class="price-card" data-reveal data-reveal-delay="300">
           <h3 class="price-card__name">Empresa</h3>
-          <div class="price-card__price">Consultar</div>
-          <p class="price-card__note">Para empresas establecidas</p>
+          <div class="price-card__price">a cotizar</div>
+          <p class="price-card__note">mensual · para empresas establecidas</p>
           <ul class="price-card__features">
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Todo lo del plan Pyme</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Apoyo legal</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Asesoria estrategica</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Prioridad en soporte</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Todo lo del plan Pyme</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Apoyo legal permanente</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Asesoría estratégica tributaria</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Prioridad máxima en soporte</li>
           </ul>
-          <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Empresa" class="btn btn--outline" style="width:100%">Consultar</a>
+          <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20plan%20Empresa" class="btn btn--outline" target="_blank" rel="noopener">Consultar plan</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- METODOLOGIA -->
   <section class="metodo">
     <div class="container">
-      <div class="metodo__header">
-        <h2 class="metodo__title">Como trabajamos</h2>
-        <p class="metodo__subtitle">Un proceso simple y transparente para que tengas total control</p>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Metodología</span>
+        <h2>Cómo trabajamos</h2>
+        <p>Cuatro pasos simples entre tú y una empresa siempre en orden.</p>
       </div>
       <div class="metodo__grid">
-        <div class="met-step">
+        <div class="met-step" data-reveal>
           <div class="met-step__num">1</div>
           <h4 class="met-step__title">Conversamos</h4>
-          <p class="met-step__text">Entendemos tu situacion actual, tus necesidades y objetivos del negocio.</p>
+          <p class="met-step__text">Una llamada de 20 minutos para entender tu situación, tus necesidades y tus metas.</p>
         </div>
-        <div class="met-step">
+        <div class="met-step" data-reveal data-reveal-delay="100">
           <div class="met-step__num">2</div>
           <h4 class="met-step__title">Analizamos</h4>
-          <p class="met-step__text">Revisamos tu documentacion, detectamos oportunidades y armamos un plan a medida.</p>
+          <p class="met-step__text">Revisamos tu documentación y te entregamos un plan claro con costos transparentes.</p>
         </div>
-        <div class="met-step">
+        <div class="met-step" data-reveal data-reveal-delay="200">
           <div class="met-step__num">3</div>
           <h4 class="met-step__title">Implementamos</h4>
-          <p class="met-step__text">Ponemos en marcha los procesos contables, tributarios y administrativos.</p>
+          <p class="met-step__text">Regularizamos lo pendiente y dejamos todos los procesos contables funcionando.</p>
         </div>
-        <div class="met-step">
+        <div class="met-step" data-reveal data-reveal-delay="300">
           <div class="met-step__num">4</div>
-          <h4 class="met-step__title">Acompanamos</h4>
-          <p class="met-step__text">Te seguimos de cerca, reportamos avances y ajustamos cuando sea necesario.</p>
+          <h4 class="met-step__title">Acompañamos</h4>
+          <p class="met-step__text">Gestión mensual continua, reportes claros y tu asesor siempre a un mensaje de distancia.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="faq">
+  <!-- FAQ -->
+  <section class="faq" id="faq">
     <div class="container">
-      <div class="faq__header">
-        <h2 class="faq__title">Preguntas frecuentes</h2>
-        <p class="faq__subtitle">Resolvemos tus dudas</p>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Resolvemos tus dudas</h2>
+        <p>Las respuestas que nuestros clientes más buscan antes de partir con nosotros.</p>
       </div>
       <div class="faq__list">
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Que servicios ofrece RIZEN?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Qué pasa si tengo declaraciones atrasadas o multas del SII?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">Ofrecemos contabilidad mensual, gestion de impuestos, remuneraciones, constitucion de empresas y apoyo legal. Todo lo que tu empresa necesita para estar en regla y crecer.</div>
+            <div class="faq-item__answer-inner">Es nuestro caso favorito. Nos especializamos en regularizar situaciones tributarias complejas: ponemos al día tus declaraciones, gestionamos las multas (y las rebajamos cuando corresponde por ley) y dejamos tu empresa 100% limpia ante el SII.</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Cuanto cuesta el servicio?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Puedo cambiarme de mi contador actual a RIZEN?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">El plan Emprende comienza desde 2 UF. Los demas planes dependen del tamano y complejidad de tu empresa. Contactanos para una cotizacion personalizada.</div>
+            <div class="faq-item__answer-inner">Sí, y es más simple de lo que imaginas. Nosotros pedimos toda la documentación a tu contador anterior y hacemos la transición sin interrumpir la operación de tu empresa. Tú solo nos avisas; el resto es nuestro trabajo.</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Trabajan con empresas de todo Chile?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Cuánto cuesta el servicio?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">Si, atendemos empresas en todo Chile de forma remota. Nuestros clientes estan desde Arica hasta Punta Arenas.</div>
+            <div class="faq-item__answer-inner">El plan Emprende parte desde 2 UF mensuales. Los planes Pyme y Empresa se cotizan según el tamaño y complejidad de tu empresa, siempre con precio fijo mensual y sin cobros sorpresa. La primera asesoría de diagnóstico es gratis.</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Cuanto tarda en constituir una empresa?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Trabajan con empresas de todo Chile?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">El proceso de constitucion toma entre 5 y 10 dias habiles, dependiendo de la complejidad y los tramites requeridos.</div>
+            <div class="faq-item__answer-inner">Sí. Todo nuestro servicio es 100% remoto y digital: desde Arica hasta Punta Arenas. Trabajamos con WhatsApp, videollamadas y documentos digitales, así que tu ubicación no es una limitación.</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Que documentos necesito para comenzar?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Cuánto demora la constitución de una empresa?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">Para constitucion: cedula de identidad de los socios, domicilio fiscal y giro de la empresa. Para contabilidad: ultimos balances y documentacion tributaria.</div>
+            <div class="faq-item__answer-inner">Entre 5 y 10 días hábiles en la mayoría de los casos, dependiendo del tipo societario y los trámites requeridos. Te mantenemos informado del avance en cada etapa.</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Puedo cambiar de plan despues?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Qué documentos necesito para empezar?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">Si, puedes cambiar de plan en cualquier momento segun las necesidades de tu empresa. Nos adaptamos a tu crecimiento.</div>
+            <div class="faq-item__answer-inner">Para constituir: tu cédula de identidad y los datos básicos de la empresa (nombre, giro, dirección). Para contabilidad: tus últimos balances y documentación tributaria disponible. Si te falta algo, lo resolvemos juntos.</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Como me comunico con ustedes?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Cómo me comunico con ustedes?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">Puedes comunicarte con nosotros por WhatsApp, correo electronico o telefono. Cada cliente tiene un asesor dedicado.</div>
+            <div class="faq-item__answer-inner">Principalmente por WhatsApp, con respuesta garantizada en menos de 1 hora hábil. También por correo y videollamada cuando se necesite. Cada cliente tiene un asesor dedicado con nombre y apellido.</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Trabajan con empresas nuevas?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Trabajan con empresas nuevas o solo con las consolidadas?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">Si, tenemos un servicio especializado para emprendedores que estan comenzando. Te acompanamos desde la constitucion de tu empresa.</div>
+            <div class="faq-item__answer-inner">Con ambas, y es justamente nuestra especialidad: acompañamos desde la constitución (plan Emprende) hasta empresas consolidadas que necesitan orden y estrategia tributaria (planes Pyme y Empresa).</div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active');var a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">
-            Ofrecen algun tipo de garantia?
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="faq-item" data-reveal>
+          <button class="faq-item__question" type="button">
+            ¿Hay contrato de permanencia mínima?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">Nuestro trabajo habla por si solo. Contamos con mas de 10 anios de experiencia y clientes que nos recomiendan. Si no estas satisfecho, podemos revisar tu caso.</div>
+            <div class="faq-item__answer-inner">No atamos a nadie. Creemos que si hacemos bien nuestro trabajo, te quedarás. Puedes terminar el servicio cuando quieras y te entregamos toda tu documentación en orden para que continúes donde prefieras.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA FINAL -->
   <section class="cta-final">
     <div class="container">
-      <h2 class="cta-final__title">Tu empresa merece estar en orden</h2>
-      <p class="cta-final__text">Contactanos hoy y descubre como podemos ayudarte a crecer con tranquilidad. Primera asesoria sin compromiso.</p>
-      <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20una%20asesoria%20sin%20compromiso" class="btn btn--ghost btn--lg">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Hablar con un asesor
-      </a>
+      <h2 class="cta-final__title" data-reveal>Tu empresa merece estar en orden</h2>
+      <p class="cta-final__text" data-reveal data-reveal-delay="100">Agenda tu asesoría gratuita hoy y descubre exactamente qué necesita tu empresa para crecer sin sustos tributarios.</p>
+      <div data-reveal data-reveal-delay="200">
+        <span class="cta-final__urgency">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Cupos limitados por mes · Garantizamos dedicación a cada cliente
+        </span>
+      </div>
+      <div data-reveal data-reveal-delay="300">
+        <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20mi%20asesor%C3%ADa%20sin%20costo" class="btn btn--whatsapp btn--lg btn--pulse" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quiero mi asesoría gratis
+        </a>
+      </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <img src="img/logo.png" alt="Rizen">
-          <p>Contabilidad, impuestos y remuneraciones gestionados por profesionales para que puedas enfocarte en hacer crecer tu negocio.</p>
+          <img src="img/logo.png" alt="Rizen - Contabilidad e Impuestos" loading="lazy">
+          <p>Contabilidad, impuestos y remuneraciones al día, gestionados por profesionales con +10 años de experiencia. Atención en todo Chile.</p>
         </div>
         <div>
           <h4 class="footer__col-title">Servicios</h4>
           <ul class="footer__links">
-            <li><a href="#servicios">Constitucion</a></li>
-            <li><a href="#servicios">Contabilidad</a></li>
-            <li><a href="#servicios">Impuestos</a></li>
+            <li><a href="#servicios">Constitución de empresas</a></li>
+            <li><a href="#servicios">Contabilidad mensual</a></li>
+            <li><a href="#servicios">Impuestos y F29</a></li>
             <li><a href="#servicios">Remuneraciones</a></li>
             <li><a href="#servicios">Apoyo legal</a></li>
           </ul>
@@ -590,29 +715,35 @@
             <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="#emprendedores">Emprendedores</a></li>
             <li><a href="#empresas">Empresas</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#precios">Precios</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer__col-title">Contacto</h4>
           <ul class="footer__links">
-            <li><a href="https://wa.me/56900000000">WhatsApp</a></li>
-            <li><a href="mailto:contacto@rizen.cl">Email</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://wa.me/56900000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contacto@rizen.cl">contacto@rizen.cl</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>2024 RIZEN. Todos los derechos reservados.</span>
-        <span>Contabilidad e Impuestos</span>
+        <span>© <span data-year>2026</span> RIZEN Contabilidad e Impuestos. Todos los derechos reservados.</span>
+        <span>Hecho en Chile</span>
       </div>
     </div>
   </footer>
 
+  <!-- FLOATING WHATSAPP (desktop) -->
+  <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20una%20asesor%C3%ADa%20sin%20costo" class="float-wa" aria-label="Hablar por WhatsApp" target="_blank" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- MOBILE WHATSAPP BAR -->
   <div class="wa-bar">
-    <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20informacion">
+    <a href="https://wa.me/56900000000?text=Hola%20Rizen%2C%20quiero%20una%20asesor%C3%ADa%20sin%20costo" target="_blank" rel="noopener">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Hablar por WhatsApp
+      Quiero mi asesoría gratis
     </a>
   </div>
 
