@@ -829,3 +829,14 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
   [data-reveal] { opacity: 1; transform: none; }
   .hero .hero-anim { opacity: 1; transform: none; }
 }
+
+/* ========================
+   FOOTER: DATOS DE NEGOCIO (NAP)
+======================== */
+.footer__nap {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.72);
+}
+.footer__nap strong { color: var(--white); font-weight: 700; }

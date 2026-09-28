@@ -239,6 +239,33 @@
 .prose th { background: var(--surface); font-family: var(--font-display); font-weight: 700; color: var(--text); }
 .prose td { color: #38505A; }
 
+/* ---------- BLOQUE NAP (CONTACTO) ---------- */
+.nap-block {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 30px 32px;
+  box-shadow: var(--shadow-sm);
+}
+.nap-block dt {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-top: 20px;
+}
+.nap-block dt:first-of-type { margin-top: 0; }
+.nap-block dd {
+  margin: 5px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.nap-block dd a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.nap-block dd a:hover { text-decoration: underline; }
+.nap-block dd small { display: block; margin-top: 3px; font-size: 14px; color: var(--muted); font-weight: 400; }
+
 /* ---------- AJUSTES DE REUTILIZACION ---------- */
 .page-section .faq__list { margin-top: 0; }
 .page-section .section-head { text-align: left; margin-bottom: 28px; }
