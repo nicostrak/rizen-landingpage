@@ -108,15 +108,38 @@ Cada página: title y description únicos, canonical, un H1, JSON-LD propio, bre
 1. Entra a **https://search.google.com/search-console** con la cuenta de Google con la que verificaste el dominio.
 2. En el selector superior elige la propiedad **Dominio: rizen.cl**.
 3. Menú izquierdo → **Sitemaps**.
-4. En "Añadir un sitemap nuevo" escribe `sitemap.xml` y presiona **Enviar**.
-   - La URL completa debe quedar como `https://www.rizen.cl/sitemap.xml`.
-5. Debe aparecer con estado **Correcto** y 25 URLs detectadas. (Puede tardar unas horas en procesar.)
+4. En "Añadir un sitemap nuevo" escribe **solo `sitemap.xml`** y presiona **Enviar**.
+   - ⚠️ **NO pegues la URL completa.** En una propiedad de tipo Dominio, Search Console
+     ya antepone el dominio. Si pegas `https://www.rizen.cl/sitemap.xml`, queda
+     `https://www.rizen.cl/https://www.rizen.cl/sitemap.xml`, que devuelve **404** y
+     produce el error *"No se ha podido leer el sitemap"* con 0 páginas descubiertas.
+   - El campo debe terminar mostrando exactamente `https://www.rizen.cl/sitemap.xml`.
+5. Debe aparecer con estado **Correcto** y 25 URLs detectadas. (Puede tardar de horas hasta 48 h en procesar.)
 6. **Pide indexación de las páginas clave** (acelera mucho):
    - Arriba, en la barra "Inspeccionar cualquier URL", pega una URL, espera el análisis y presiona **Solicitar indexación**.
    - Hazlo con: `https://www.rizen.cl/`, `/contabilidad-para-pymes/`, `/constitucion-de-empresa/`, `/regularizar-deudas-sii/`, `/contacto/` y `/blog/`.
    - Hay un límite diario de solicitudes; si te frena, continúa al día siguiente.
 7. **Revisa en 7 y 30 días**: *Páginas* (cuántas están indexadas) y *Rendimiento* (consultas, impresiones, CTR).
    - En *Rendimiento* → pestaña **Consultas** verás por qué búsquedas ya apareces. Esas son las que conviene cubrir con más contenido.
+
+#### Si aparece "No se ha podido leer el sitemap"
+
+Verificado que el sitemap está correcto (200, `application/xml`, XML válido, 25 URLs,
+Googlebot ve lo mismo, `robots.txt` lo declara), las causas posibles son dos:
+
+1. **La URL quedó mal registrada en GSC** (lo más frecuente). Revisa qué URL aparece en
+   la lista de sitemaps. Si tiene el dominio duplicado, bórrala (⋮ → *Quitar sitemap*) y
+   vuelve a agregarla escribiendo **solo `sitemap.xml`**.
+2. **Google lo leyó en un momento malo.** El sitio pasó por estados de despliegue con
+   error durante las primeras horas. Google reintenta solo; si a las 48 h sigue igual,
+   vuelve a enviarlo.
+
+Para comprobar que Google puede leerlo, usa **Inspeccionar cualquier URL** con
+`https://www.rizen.cl/sitemap.xml`.
+
+> **Tranquilidad:** aunque la carga manual falle, `robots.txt` ya declara
+> `Sitemap: https://www.rizen.cl/sitemap.xml`, así que Google lo descubre igual.
+> La indexación no está bloqueada por esto.
 
 ---
 
