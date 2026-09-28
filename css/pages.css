@@ -1,0 +1,257 @@
+/* ========================
+   RIZEN - ESTILOS DE PAGINAS INTERNAS
+   (servicios, blog, contenido)
+   Se carga despues de styles.css y reutiliza sus design tokens.
+======================== */
+
+/* ---------- HERO DE SUBPAGINA ---------- */
+.subpage-hero {
+  background: var(--surface);
+  padding: 132px 0 64px;
+  position: relative;
+  overflow: hidden;
+}
+.subpage-hero::after {
+  content: '';
+  position: absolute;
+  top: -180px; right: -140px;
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(0,103,128,0.10) 0%, rgba(0,103,128,0) 70%);
+  pointer-events: none;
+}
+.subpage-hero .container { position: relative; z-index: 1; max-width: 860px; }
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 22px;
+  list-style: none;
+}
+.breadcrumb li { display: inline-flex; align-items: center; gap: 8px; }
+.breadcrumb li + li::before { content: '/'; color: var(--border); }
+.breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 600; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.subpage-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.4vw, 50px);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.subpage-hero h1 em { font-style: normal; color: var(--primary); }
+.subpage-hero__lead {
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 720px;
+}
+.subpage-hero__actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* ---------- SECCIONES ---------- */
+.page-section { padding: 68px 0; }
+.page-section--alt { background: var(--surface); }
+.page-section .container { max-width: 860px; }
+.page-section--wide .container { max-width: 1060px; }
+
+/* ---------- PROSA ---------- */
+.prose { font-size: 17px; line-height: 1.78; color: #2B3B42; }
+.prose > * + * { margin-top: 20px; }
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: clamp(23px, 2.8vw, 31px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 44px;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 30px;
+}
+.prose p { color: #38505A; }
+.prose strong { color: var(--text); font-weight: 600; }
+.prose a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { color: var(--primary-dark); }
+.prose ul, .prose ol { padding-left: 22px; }
+.prose li { margin-bottom: 10px; color: #38505A; }
+.prose li::marker { color: var(--primary); }
+.prose blockquote {
+  border-left: 3px solid var(--primary);
+  background: var(--surface);
+  padding: 18px 22px;
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-style: italic;
+}
+.prose hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+
+/* ---------- LISTA CON CHECKS ---------- */
+.check-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.check-list li {
+  position: relative;
+  padding-left: 34px;
+  color: #38505A;
+  line-height: 1.6;
+}
+.check-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 4px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: rgba(0,103,128,0.10) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23006780' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/12px no-repeat;
+}
+
+/* ---------- TARJETAS INFORMATIVAS ---------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.info-card h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+.info-card p { font-size: 15px; line-height: 1.65; color: var(--muted); margin: 0; }
+
+/* ---------- AVISO / DISCLAIMER ---------- */
+.disclaimer {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-top: 40px;
+}
+
+/* ---------- CTA FINAL ---------- */
+.cta-band {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: var(--white);
+  padding: 64px 0;
+  text-align: center;
+}
+.cta-band .container { max-width: 720px; }
+.cta-band h2 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+.cta-band p { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: 28px; }
+.cta-band .btn--light {
+  background: var(--white);
+  color: var(--primary-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s;
+}
+.cta-band .btn--light:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.22); }
+
+/* ---------- ENLAZADO INTERNO ---------- */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+.related-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s, border-color 0.25s;
+}
+.related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary-light); }
+.related-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.related-card span { font-size: 14px; line-height: 1.6; color: var(--muted); }
+
+/* ---------- POSTS DEL BLOG ---------- */
+.post-list { display: grid; gap: 18px; margin-top: 26px; }
+.post-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px 28px;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s, border-color 0.25s;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary-light); }
+.post-card__meta { font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); }
+.post-card__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+  margin: 10px 0 8px;
+}
+.post-card__excerpt { font-size: 15px; line-height: 1.65; color: var(--muted); margin: 0; }
+
+.post-header { margin-bottom: 8px; }
+.post-header__meta { font-size: 13px; color: var(--muted); }
+
+/* ---------- TABLA COMPARATIVA ---------- */
+.prose table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 24px; }
+.prose th, .prose td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+.prose th { background: var(--surface); font-family: var(--font-display); font-weight: 700; color: var(--text); }
+.prose td { color: #38505A; }
+
+/* ---------- AJUSTES DE REUTILIZACION ---------- */
+.page-section .faq__list { margin-top: 0; }
+.page-section .section-head { text-align: left; margin-bottom: 28px; }
+.page-section .section-head .eyebrow { display: inline-block; margin-bottom: 10px; }
+
+@media (max-width: 720px) {
+  .subpage-hero { padding: 112px 0 48px; }
+  .page-section { padding: 52px 0; }
+  .prose { font-size: 16px; }
+}
+
+/* ---------- CABECERA DE MARCA EN SUBPAGINAS ---------- */
+.header__logo img { height: 36px; }
+@media (max-width: 980px) {
+  .header__nav { display: none; }
+}
