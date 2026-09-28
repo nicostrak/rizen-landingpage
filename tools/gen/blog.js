@@ -330,9 +330,14 @@ const POSTS = [
   }
 ];
 
-// Articulos adicionales (boletas de honorarios, PPM, finiquito, Pro Pyme).
-// Se agregan aqui para que aparezcan tambien en el indice del blog.
+// Articulos adicionales. Se agregan aqui para que aparezcan tambien en el
+// indice del blog.
+//   blog-extra     boletas de honorarios, PPM, finiquito, Pro Pyme
+//   blog-tramites  iniciar actividades, patente municipal, factura electronica, termino de giro
+//   blog-impuestos IVA y credito fiscal, renta presunta, Operacion Renta, primer trabajador
 POSTS.push(...require('./blog-extra'));
+POSTS.push(...require('./blog-tramites'));
+POSTS.push(...require('./blog-impuestos'));
 
 POSTS.forEach(p => {
   p.ogType = 'article';
