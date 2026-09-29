@@ -105,10 +105,7 @@ function head(p) {
       <a href="/#precios">Precios</a>
       <a href="/#servicios">Servicios</a>
       <a href="/#nosotros">Nosotros</a>
-      <a href="/constitucion-de-empresa/">Constitución de empresa</a>
-      <a href="/regularizar-deudas-sii/">Regularizar deudas SII</a>
       <a href="/blog/">Blog</a>
-      <a href="/contacto/">Contacto</a>
       <a href="${WA_CTA}" class="btn btn--whatsapp" target="_blank" rel="noopener">Quiero mi asesoría gratis</a>
     </nav>
   </aside>
