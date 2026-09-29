@@ -36,15 +36,18 @@
   const hamburger = document.querySelector('.header__hamburger');
   const drawer = document.querySelector('.drawer');
   const drawerOverlay = document.querySelector('.drawer__overlay');
+  const drawerClose = drawer ? drawer.querySelector('.drawer__close') : null;
 
   const toggleDrawer = (open) => {
     if (!drawer) return;
     drawer.classList.toggle('is-open', open);
     if (drawerOverlay) drawerOverlay.classList.toggle('is-visible', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+    document.body.classList.toggle('drawer-open', open);
+    if (hamburger) hamburger.setAttribute('aria-expanded', String(open));
   };
 
   if (hamburger) hamburger.addEventListener('click', () => toggleDrawer(true));
+  if (drawerClose) drawerClose.addEventListener('click', () => toggleDrawer(false));
   if (drawerOverlay) drawerOverlay.addEventListener('click', () => toggleDrawer(false));
   if (drawer) {
     drawer.querySelectorAll('a').forEach(a =>

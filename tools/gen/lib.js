@@ -86,7 +86,7 @@ function head(p) {
         ${WA_ICON}
         <span>Hablar por WhatsApp</span>
       </a>
-      <button class="header__hamburger" aria-label="Abrir menú">
+      <button class="header__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
@@ -94,7 +94,7 @@ function head(p) {
 
   <!-- MOBILE DRAWER -->
   <div class="drawer__overlay"></div>
-  <aside class="drawer" aria-label="Menú móvil">
+  <aside class="drawer" id="menu-movil" aria-label="Menú móvil">
     <div class="drawer__header">
       <img src="/img/logo.png" width="2521" height="900" alt="RIZEN - Contabilidad e Impuestos">
       <button class="drawer__close" aria-label="Cerrar menú">
