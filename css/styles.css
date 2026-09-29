@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
 }
 .header.is-hidden { transform: translateY(-100%); }
 .header .container { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 16px; }
+.header__logo { flex-shrink: 0; }
 .header__logo img { height: 36px; width: auto; transition: transform 0.3s var(--ease-out); }
 .header__logo:hover img { transform: scale(1.04); }
 .header__nav { display: flex; align-items: center; gap: 32px; }
@@ -262,7 +263,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(30px, -30px) scale(1.08); }
 }
-.hero .container { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; }
+/* una sola columna: el hero quedo sin la card lateral.
+   940px es el ancho donde el H1 cae en 2 lineas sin dejar una palabra huerfana. */
+.hero .container { display: grid; grid-template-columns: 1fr; }
+.hero__content { max-width: 940px; }
 .hero__badge {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 700;
@@ -275,11 +279,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
   margin-bottom: 24px;
 }
 .hero__badge svg { width: 14px; height: 14px; }
-.hero__title { font-size: 52px; font-weight: 800; line-height: 1.06; color: var(--text); margin-bottom: 22px; letter-spacing: -1.5px; }
+.hero__title { font-size: 52px; font-weight: 800; line-height: 1.06; color: var(--text); margin-bottom: 22px; letter-spacing: -1.5px; text-wrap: balance; }
 .hero__title em { font-style: normal; color: var(--primary); }
-.hero__subtitle { font-size: 18px; color: var(--muted); line-height: 1.7; margin-bottom: 32px; max-width: 500px; }
+.hero__subtitle { font-size: 18px; color: var(--muted); line-height: 1.7; margin-bottom: 32px; max-width: 660px; }
 .hero__actions { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
-.hero__micro { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); margin-bottom: 36px; }
+.hero__micro { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
 .hero__micro svg { width: 14px; height: 14px; color: var(--whatsapp); flex-shrink: 0; }
 
 /* Hero entrance animation */
@@ -392,13 +396,14 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
 /* ========================
    SERVICIOS
 ======================== */
-.servicios { padding: 90px 0; background: var(--surface); }
+.servicios { padding: 90px 0; }
 .servicios__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .serv-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 30px;
+  box-shadow: var(--shadow-md);
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s, border-color 0.3s;
 }
 .serv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(0,103,128,0.3); }
@@ -546,6 +551,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
   border-radius: var(--radius-xl);
   padding: 34px 30px;
   text-align: center;
+  box-shadow: var(--shadow-md);
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s;
   position: relative;
   display: flex; flex-direction: column;
@@ -587,7 +593,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
 /* ========================
    METODOLOGIA
 ======================== */
-.metodo { padding: 90px 0; }
+.metodo { padding: 90px 0; background: var(--surface); }
 .metodo__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
 .met-step { text-align: center; position: relative; transition: transform 0.35s var(--ease-out); }
 .met-step:hover { transform: translateY(-5px); }
@@ -751,7 +757,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
 }
 
 @media (max-width: 1024px) {
-  .hero .container { gap: 40px; }
   .hero__title { font-size: 42px; }
   .servicios__grid { grid-template-columns: repeat(2, 1fr); }
   .porque__grid { grid-template-columns: repeat(2, 1fr); }
@@ -767,7 +772,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.15; }
   .header__cta { padding: 10px; border-radius: 50%; }
   .header__hamburger { display: block; }
   .hero { padding: 120px 0 50px; }
-  .hero .container { grid-template-columns: 1fr; gap: 36px; }
   .hero__title { font-size: 34px; letter-spacing: -0.5px; }
   .hero__subtitle { font-size: 16px; }
   .hero__actions { flex-direction: column; align-items: stretch; }

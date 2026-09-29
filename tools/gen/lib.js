@@ -77,9 +77,8 @@ function head(p) {
         <img src="/img/logo.png" width="2521" height="900" alt="RIZEN, contabilidad y asesoría tributaria para empresas en Chile">
       </a>
       <nav class="header__nav" aria-label="Navegación principal">
+        <a href="/#precios">Precios</a>
         <a href="/#servicios">Servicios</a>
-        <a href="/#emprendedores">Emprendedores</a>
-        <a href="/#empresas">Empresas</a>
         <a href="/#nosotros">Nosotros</a>
         <a href="/blog/">Blog</a>
       </nav>
@@ -103,15 +102,12 @@ function head(p) {
       </button>
     </div>
     <nav class="drawer__nav">
-      <a href="/#servicios">Servicios</a>
-      <a href="/#emprendedores">Emprendedores</a>
-      <a href="/#empresas">Empresas</a>
-      <a href="/#nosotros">Nosotros</a>
       <a href="/#precios">Precios</a>
-      <a href="/blog/">Blog</a>
-      <a href="/contabilidad-para-pymes/">Contabilidad para pymes</a>
+      <a href="/#servicios">Servicios</a>
+      <a href="/#nosotros">Nosotros</a>
       <a href="/constitucion-de-empresa/">Constitución de empresa</a>
       <a href="/regularizar-deudas-sii/">Regularizar deudas SII</a>
+      <a href="/blog/">Blog</a>
       <a href="/contacto/">Contacto</a>
       <a href="${WA_CTA}" class="btn btn--whatsapp" target="_blank" rel="noopener">Quiero mi asesoría gratis</a>
     </nav>
